@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "./build",
+        "sourceMap": true,
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es2015",
+        "skipLibCheck": true,
+        "experimentalDecorators": true,
+        "jsx": "preserve",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
