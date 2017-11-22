@@ -10,8 +10,7 @@
         "target": "es2015",
         "skipLibCheck": true,
         "experimentalDecorators": true,
-        "jsx": "preserve",
-        "allowSyntheticDefaultImports": true
+        "jsx": "preserve"
     },
     "exclude": [
         "node_modules"
