@@ -1,38 +1,18 @@
 import * as React from "react";
-import { Component } from "react";
-import { withFauxDOM, ReactFauxDomProps } from "react-faux-dom";
-import * as d3 from "d3";
+import { StatelessComponent } from "react";
+import src from "../../img/server-rack-cabinet-hi.png";
+import { Link } from "react-router-dom";
 
 interface CabinetProps {
+    id: string;
 }
 
-interface ExtraProps {
-    group: SVGGElement;
+export const Cabinet: StatelessComponent<CabinetProps> = (props) => {
+    return (
+        <div>
+            <h1>Cabinet {props.id}</h1>
+            <img src={src} />
+            <Link to={`/cabinet/${props.id}/lights`}>lights</Link>
+        </div>
+    );
 }
-
-class CabinetComponent extends Component<CabinetProps & ReactFauxDomProps> {
-    componentDidMount() {
-        const faux = this.props.connectFauxDOM("g", "group");
-
-        d3.select(faux)
-            .append("rect")
-            .attr("height", 30)
-            .attr("width", 20)
-            .style("fill", "red")
-            .transition()
-            .duration(5000)
-            .style("fill", "black");
-
-        this.props.animateFauxDOM(5000);
-    }
-
-    render() {
-        const props = this.props as ExtraProps;
-
-        return (
-            <g>{props.group}</g>
-        );
-    }
-}
-
-export const Cabinet = withFauxDOM(CabinetComponent);
