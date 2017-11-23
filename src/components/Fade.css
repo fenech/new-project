@@ -1,0 +1,52 @@
+.container {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.fadeEnter {
+    opacity: 0.01;
+}
+
+.fadeEnterActive {
+    opacity: 1;
+    transition: opacity 1000ms ease-in 1000ms;
+}
+
+.fadeExit {
+    opacity: 1;
+}
+
+.fadeExitActive {
+    opacity: 0.01;
+    transition: opacity 1000ms ease-out;
+}
+
+.fog {
+    height: 100%;
+    width: 100%;
+    background: url(../../img/fog3.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.01;
+}
+
+.fogEnterActive {
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    animation-name: fogAnimation;
+}
+
+@keyframes fogAnimation {
+    0% {
+        opacity: 0.01;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.01;
+    }
+}

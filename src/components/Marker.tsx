@@ -1,8 +1,6 @@
 import * as React from "react";
 import { StatelessComponent, Component } from "react";
-import { Route, RouteComponentProps } from "react-router-dom";
-import { History } from "history";
-import { withRouter } from "react-router";
+import { Route, RouteComponentProps, Link } from "react-router-dom";
 
 interface MarkerProps {
     id: number;
@@ -10,18 +8,17 @@ interface MarkerProps {
     left: number;
 }
 
-export class MarkerComponent extends Component<MarkerProps & RouteComponentProps<any>> {
+export class Marker extends Component<MarkerProps> {
     render() {
         return (
-            <svg
-                height={60} width={25}
-                style={{ position: "absolute", top: this.props.top, left: this.props.left }}
-                onClick={() => this.props.history.push(`/cabinet/${this.props.id}`)}
-            >
-                <rect height={60} width={25} fill="#333" stroke="#222" />
-            </svg>
+            <Link to={`/cabinet/${this.props.id}`}>
+                <svg
+                    height={60} width={25}
+                    style={{ position: "absolute", top: this.props.top, left: this.props.left }}
+                >
+                    <rect height={60} width={25} fill="#333" stroke="#222" />
+                </svg>
+            </Link>
         );
     }
 }
-
-export const Marker = withRouter<MarkerProps>(MarkerComponent);
