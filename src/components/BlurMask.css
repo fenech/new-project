@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.blurMask {
+    filter: blur(10px);
+}
+
+.blurMask.enter {
+    filter: none;
+}
+
+.blurMask.enterActive {
+    filter: blur(10px);
+    transition: filter 1s ease-out 0s;
+}
+
+.blurMask.exitActive {
+    filter: none;
+    transition: filter 1s ease-in 0s;
+}

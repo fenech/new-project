@@ -12,22 +12,20 @@ interface LightsProps {
 }
 
 const classNames = {
-    appear: styles.lightsEnter,
-    appearActive: styles.lightsEnterActive,
-    enter: styles.lightsEnter,
-    enterActive: styles.lightsEnterActive
+    enterActive: styles.lightsEnterActive,
+    exitActive: styles.lightsExitActive
 };
 
 export const Lights: StatelessComponent<LightsProps> = (props) => {
     return (
-        <TransitionGroup>
+        <TransitionGroup className={styles.lights}>
             {
                 props.shouldRenderChildren &&
                 <CSSTransition
                     classNames={classNames}
                     timeout={{
                         enter: 1000,
-                        exit: 0
+                        exit: 750
                     }}
                     unmountOnExit
                 >

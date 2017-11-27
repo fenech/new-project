@@ -6,10 +6,6 @@ import * as styles from "./Fade.css";
 interface FadeProps {
 }
 
-const classNamesFog = {
-    enterActive: styles.fogEnterActive
-};
-
 const classNamesFade = {
     enter: styles.fadeEnter,
     enterActive: styles.fadeEnterActive,
@@ -33,20 +29,12 @@ export class Fade extends Component<FadeProps> {
                 {
                     this.props.children && [
                         <CSSTransition
-                            key="fog"
-                            classNames={classNamesFog}
-                            timeout={timeout}
-                            unmountOnExit
-                        >
-                            <div className={styles.fog} />
-                        </CSSTransition>,
-                        <CSSTransition
                             key="fade"
                             classNames={classNamesFade}
                             timeout={timeout}
                             unmountOnExit
                         >
-                            <div className={styles.container}>
+                            <div>
                                 {this.props.children}
                             </div>
                         </CSSTransition>
