@@ -14,7 +14,7 @@ const classNamesFade = {
 };
 
 const timeout = {
-    enter: 10000,
+    enter: 1000,
     exit: 1000
 };
 

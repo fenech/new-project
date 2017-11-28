@@ -12,9 +12,15 @@ export const Cabinet: StatelessComponent<CabinetProps> = (props) => {
     return (
         <div className={styles.cabinet}>
             <h1>Cabinet {props.id}</h1>
-            <img src={src} />
-            <Link to={`/cabinet/${props.id}/lights`}>lights</Link>
-            <Link to={`/cabinet/${props.id}/ambient`}>ambient</Link>
+            <div className={styles.image}>
+                <img src={src} />
+                <div className={`${styles.link} aaa`}>
+                    <Link to={`/cabinet/${props.id}/lights`}>lights</Link>
+                </div>
+                <div className={`${styles.link} bbb`}>
+                    <Link to={`/cabinet/${props.id}/ambient`}>ambient</Link>
+                </div>
+            </div>
         </div>
     );
 }

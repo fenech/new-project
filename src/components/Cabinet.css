@@ -1,6 +1,23 @@
 .cabinet {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-right: 50px;
+}
+
+.image {
+    position: relative;
+}
+
+.link {
+    position: absolute;
+    transform: rotate(30deg) skew(30deg);
+    font-size: 2em;
+    top: 172px;
+    left: 40px;
+}
+
+.link + .link {
+    top: 240px;
+}
+
+.link a {
+    color: white;
 }

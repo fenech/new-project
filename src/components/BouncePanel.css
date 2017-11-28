@@ -9,13 +9,10 @@
 }
 
 .bounceExitActive {
+    order: 1;
     animation-name: bounceOutUp;
     animation-iteration-count: 1;
     animation-duration: 0.75s;
-}
-
-.wrapper {
-    margin-left: 50px;
 }
 
 @keyframes bounceInLeft {

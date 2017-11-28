@@ -18,3 +18,7 @@
     align-items: center;
     filter: drop-shadow(12px 16px 20px #222);
 }
+
+.content > * {
+    flex-shrink: 0;
+}
