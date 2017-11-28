@@ -4,20 +4,28 @@
     width: 100%;
 }
 
+.enterActive {
+    animation-name: blurIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.exitActive {
+    animation-name: blurIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+}
+
 .blurMask {
     filter: blur(5px);
 }
 
-.blurMask.enter {
-    filter: none;
-}
-
-.blurMask.enterActive {
-    filter: blur(5px);
-    transition: filter 1s ease-out 0s;
-}
-
-.blurMask.exitActive {
-    filter: none;
-    transition: filter 1s ease-in 0s;
+@keyframes blurIn {
+    from {
+        filter: none;
+    }
+    to {
+        filter: blur(5px);
+    }
 }

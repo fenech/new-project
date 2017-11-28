@@ -9,34 +9,24 @@ interface BlurMaskProps extends RouteComponentProps<any> {
 
 const timeout = {
     enter: 1000,
-    exit: 10000
+    exit: 1000
 };
 
 const classNames = {
-    enter: styles.enter,
     enterActive: styles.enterActive,
     exitActive: styles.exitActive
 };
 
 export const BlurMask: StatelessComponent<BlurMaskProps> = (props) => {
     return (
-        <div className={styles.container}>
-            <div className={styles.container}>
+        <CSSTransition
+            classNames={classNames}
+            timeout={timeout}
+            in={!!props.match}
+        >
+            <div className={[styles.container, props.match && styles.blurMask].join(" ")}>
                 {props.children}
             </div>
-            <TransitionGroup>
-                {
-                    props.match &&
-                    <CSSTransition
-                        classNames={classNames}
-                        timeout={timeout}
-                    >
-                        <div className={`${styles.container} ${styles.blurMask}`}>
-                            {props.children}
-                        </div>
-                    </CSSTransition>
-                }
-            </TransitionGroup>
-        </div>
+        </CSSTransition>
     );
 }

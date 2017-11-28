@@ -1,5 +1,5 @@
 export const container: string;
-export const blurMask: string;
-export const enter: string;
 export const enterActive: string;
+export const blurIn: string;
 export const exitActive: string;
+export const blurMask: string;
