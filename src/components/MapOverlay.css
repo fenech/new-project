@@ -1,20 +1,20 @@
 .mapOverlay, .link {
-    position: absolute;
     height: 100%;
-    width: 100%;
 }
 
-.mapOverlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.link {
+    position: absolute;
+    width: 100%;
 }
 
 .content {
     position: absolute;
+    top: 10%;
+    bottom: 10%;
+    margin: 0 50px;
+    padding: 0 50px;
     display: flex;
     justify-content: left;
     align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0 50px;
+    filter: drop-shadow(12px 16px 20px #222);
 }

@@ -9,6 +9,7 @@ import { Fade } from "./Fade";
 import { TransitionGroup } from "react-transition-group";
 import { LightsContainer } from "./Lights";
 import { BlurMask } from "./BlurMask";
+import { BouncePanel } from "./BouncePanel";
 
 export const App = () => (
     <div>
@@ -34,8 +35,16 @@ export const App = () => (
                                 <Cabinet id={match.params.id} />
                                 <Route
                                     path={`${match.url}/lights`}
-                                    children={(props) => <LightsContainer {...props} />}
+                                    children={props => (
+                                        <BouncePanel in={!!props.match} title="Lights">
+                                            <LightsContainer />
+                                        </BouncePanel>
+                                    )}
                                 />
+                                {/* <Route
+                                        path={`${match.url}/ambient`}
+                                        component={AmbientContainer}
+                                    /> */}
                             </MapOverlay>
                         }
                     </Fade>

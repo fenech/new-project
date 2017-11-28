@@ -14,7 +14,7 @@ export const Cabinet: StatelessComponent<CabinetProps> = (props) => {
             <h1>Cabinet {props.id}</h1>
             <img src={src} />
             <Link to={`/cabinet/${props.id}/lights`}>lights</Link>
-            <Link to={`/cabinet/${props.id}/lights`}>lights</Link>
+            <Link to={`/cabinet/${props.id}/ambient`}>ambient</Link>
         </div>
     );
 }

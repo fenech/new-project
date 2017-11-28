@@ -5,7 +5,7 @@
 }
 
 .blurMask {
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
 .blurMask.enter {
@@ -13,7 +13,7 @@
 }
 
 .blurMask.enterActive {
-    filter: blur(10px);
+    filter: blur(5px);
     transition: filter 1s ease-out 0s;
 }
 

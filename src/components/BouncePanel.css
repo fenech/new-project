@@ -2,16 +2,20 @@
     margin-left: 50px;
 }
 
-.lightsEnterActive {
+.bounceEnterActive {
     animation-name: bounceInLeft;
     animation-iteration-count: 1;
     animation-duration: 1s;
 }
 
-.lightsExitActive {
+.bounceExitActive {
     animation-name: bounceOutUp;
     animation-iteration-count: 1;
     animation-duration: 0.75s;
+}
+
+.wrapper {
+    margin-left: 50px;
 }
 
 @keyframes bounceInLeft {

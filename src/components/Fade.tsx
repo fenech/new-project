@@ -14,7 +14,7 @@ const classNamesFade = {
 };
 
 const timeout = {
-    enter: 3000,
+    enter: 10000,
     exit: 1000
 };
 
@@ -34,9 +34,7 @@ export class Fade extends Component<FadeProps> {
                             timeout={timeout}
                             unmountOnExit
                         >
-                            <div>
-                                {this.props.children}
-                            </div>
+                            {this.props.children}
                         </CSSTransition>
                     ]
                 }
